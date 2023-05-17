@@ -1,10 +1,8 @@
 ---
-import Center from "../components/Center.astro";
+import Home from "../components/Home.vue";
 import Page from "../layouts/Page.astro";
 ---
 
-<Page title="Index">
-  <Center>
-    <h1>lmao</h1>
-  </Center>
+<Page title="Reaction">
+  <Home client:load />
 </Page>
