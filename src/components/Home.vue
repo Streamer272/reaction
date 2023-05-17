@@ -22,7 +22,8 @@
 
     <a
       href="https://github.com/Streamer272/reaction"
-      class="fixed bottom-4 left-8 group-data-[state=false]:text-on-primary group-data-[state=true]:text-on-accent hover:scale-125 transition-transform text-xl"
+      target="_blank"
+      class="fixed bottom-4 left-8 group-data-[state=false]:text-on-primary group-data-[state=true]:text-on-accent animate-bounce transition-transform text-xl"
     >
       repo
     </a>
