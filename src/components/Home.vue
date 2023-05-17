@@ -15,7 +15,7 @@
     <p v-else class="text-on-accent text-xl">You took {{ captured }} ms</p>
 
     <p
-      class="fixed bottom-4 right-8 group-data-[state=false]:text-on-primary group-data-[state=true]:text-on-accent text-lg"
+      class="fixed bottom-4 right-8 group-data-[error=true]:!text-on-accent group-data-[state=false]:text-on-primary group-data-[state=true]:text-on-accent text-lg"
     >
       Press <code class="font-dm-bold">R</code> to restart
     </p>
@@ -23,12 +23,29 @@
     <a
       href="https://github.com/Streamer272/reaction"
       target="_blank"
-      class="fixed bottom-4 left-8 group-data-[state=false]:text-on-primary group-data-[state=true]:text-on-accent animate-bounce transition-transform text-xl"
+      class="fixed bottom-4 left-6 text-xl group-data-[error=true]:!text-on-accent group-data-[state=false]:text-on-primary group-data-[state=true]:text-on-accent animate-bye active:opacity-0"
     >
       repo
     </a>
   </div>
 </template>
+
+<style scoped>
+.animate-bye:active {
+  animation: bye 400ms ease-in-out;
+}
+
+@keyframes bye {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+</style>
 
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
